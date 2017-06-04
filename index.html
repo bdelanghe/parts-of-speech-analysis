@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>RiTa.js</title>
+    <script src="libraries/p5.js" type="text/javascript"></script>
+
+    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="libraries/p5.sound.js" type="text/javascript"></script>
+    <script src="libraries/rita-full.js" type="text/javascript"></script>
+
+    <script src="sketch.js" type="text/javascript"></script>
+
+    <style>
+      body {
+        padding: 20px;
+      }
+
+      .text {
+        border-style: solid;
+        border-width: 1px;
+        padding: 20px;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <h1>Anaylizing Job Listings</h1>
+    <textarea id="listing" rows="1" cols="1">
+    Integrity Analyst
+    Brooklyn, NY
+
+    Kickstarter’s Integrity Team is looking for a teammate with strong critical thinking and deduction skills, a knack for gathering information and spotting trends, and the creative initiative to help develop tools that identify and preempt threats to our ecosystem. This position calls for a love of solving puzzles, the communication skills to present complicated information in a way that everyone can understand, and most importantly, a deep capacity for empathy. This is an entry-level position, and we encourage candidates of all backgrounds to apply.
+
+    Your daily responsibilities will include, but not be limited to:
+
+    - Investigating Kickstarter projects for misleading behavior.
+
+    - Analyzing payments fraud.
+
+    - Enforcing our Community Guidelines while moderating comments and messages.
+
+    - Reviewing project submissions to ensure that they meet Our Rules.
+
+    - Compiling and present reports of your findings.
+
+    - Cataloging workflow, log noteworthy events, and apply data to improve procedures.
+
+    - Communicating with our community of backers and creators.
+
+    About you:
+
+    - A fair judge who keeps a level-head and seeks elegant solutions.
+
+    - A curious, quick learner and problem-solver.
+
+    - Passion and enthusiasm for Kickstarter’s mission to support the arts.
+
+    - Experience with data, including familiarity with Excel and/or SQL.
+
+    If this sounds like you, please apply with a little bit of information about yourself and your resume.
+</textarea>
+
+<button type="button" onclick="processRita()">Try it</button>
+
+<p id="demo"></p>
+
+
+  </body>
+</html>
