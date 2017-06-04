@@ -1,0 +1,27 @@
+<head>
+<style>
+form {
+  float: left;
+}
+/*.right {
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  top: 0;
+}*/
+textarea{
+  outline: none;
+  resize: none;
+}
+body {
+  padding: 20px;
+  background-color: linen;
+  word-break:break-all
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+</style>
+</head>
