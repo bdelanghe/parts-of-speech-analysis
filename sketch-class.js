@@ -10,7 +10,7 @@ function setup(){
 var i = (''), rs = [], ra = [], words = [], counts = [];
 
 var word = class word {
-  constructor(string, pos, count) {
+  constructor(string, pos, freq, count) {
     this.string = string,
     this.pos = pos,
     this.freq = freq,
@@ -18,11 +18,35 @@ var word = class word {
   }
 }
 
+function createwords(s, pos, freq, count) {
+  arr = [];
+  for (var w = 0; w < s.length; w++) {
+    var word = {
+      string:s[w],
+      pos:pos[w],
+      freq:freq[w],
+      count:count[w]
+    }
+    console.log(word);
+    arr.push(word);
+  }
+  // console.log(arr);
+  return arr;
+}
+
 function wordarray(input){
   a = tokens(i);
-  c = count(a);
-  p = POS(c[0]);
+
+  cs = count(a);
+  c = cs[1];
+  s = cs[0];
+  f = freq(s);
+  p = POS(s);
+
+  arr = createwords(s,p,f,c);
+  return arr;
 }
+
 
 function input(){
   i = document.getElementById("TextBox").value;
@@ -44,19 +68,29 @@ function tokens(s) {
   return ra;
 }
 
-function POS(words) {
+function POS(s) {
   pos = [];
-  for (var w = 0; w < words.length; w++) {
-    var rita = new RiString(str(w));
-    var p = rita.pos();
-    pos.push(p);
+  for (var w = 0; w < s.length; w++) {
+    rs = new RiString(str(s[w]));
+    var p = rs.pos();
+    pos.push(p[0]);
   }
-  return [words, pos];
+  return pos;
 }
 
 
-function freq(){
-
+function freq(s){
+  arr = [];
+  for (var w = 0; w < s.length; w++) {
+    var ind = wfreq.indexOf(s[w]);
+    if (ind == -1) {
+      arr.push(null);
+      } else {
+      rank = rfreq[ind];
+      arr.push(rank);
+    }
+  }
+  return arr;
 }
 
 function count(s){
@@ -74,7 +108,6 @@ function count(s){
       cnt[arr.length - 1] = c;
     }
   }
-  counts = cnt;
   return [arr, cnt];
 }
 
