@@ -10,7 +10,7 @@ function setup(){
 var i = (''), rs = [], ra = [], words = [], counts = [];
 
 var word = class word {
-  constructor(string, pos, freq, count) {
+  constructor(string, pos, count) {
     this.string = string,
     this.pos = pos,
     this.freq = freq,
@@ -18,20 +18,20 @@ var word = class word {
   }
 }
 
+function wordarray(input){
+  a = tokens(i);
+  c = count(a);
+  p = POS(c[0]);
+}
+
 function input(){
   i = document.getElementById("TextBox").value;
-  // console.log(i);
+
 
   document.getElementById("button1").firstChild.data = 'processing...';
   document.getElementById("TextBox").value = '';
 
-  a = tokens(i);
-  c = count(a);
-  // console.log(c);
-  p = POS(c[0]);
-  console.log(p);
-  // console.log(a);
-  // console.log(a.sort());
+  var array = wordarray(i);
 
   document.getElementById("button1").firstChild.data = 'complete!';
 
