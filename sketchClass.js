@@ -51,12 +51,6 @@ function anaylze(){
   drawBody(posGroups);
 }
 
-function click(){
-  var p = document.getElementById("analyze");
-
-  p.onclick = anaylze;
-}
-
 function input(){
   var textInput = document.getElementById("textBox").value;
   document.getElementById("textBox").value = '';
@@ -78,7 +72,6 @@ function pos(stringArray) {
   }
   return posArray;
 }
-
 
 function freq(stringArray){
   var frequencyArray = [];
@@ -111,7 +104,6 @@ function count(textInput){
   }
   return [stringArray, countArray];
 }
-
 
 function groupPos(stringArray) {
   var sortedPos = [];
