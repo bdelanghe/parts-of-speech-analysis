@@ -7,19 +7,17 @@
     <script src="libraries/p5.js" type="text/javascript"></script>
 
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
-    <!-- <script src="libraries/p5.sound.js" type="text/javascript"></script> -->
     <script src="libraries/rita-full.js" type="text/javascript"></script>
 
-    <script src="sketch-class.js" type="text/javascript"></script>
+    <script src="sketchClass.js" type="text/javascript"></script>
     <script src="commonwords.js" type="text/javascript"></script>
 
   </head>
-  <body>
-    <form id="form1">
+  <body onload="clickEvent();">
     <h1>Parts of Speech Analysis</h1>
-    <textarea id="TextBox" rows="60" cols="60">
-      "GREEN EGGS AND HAM" (by Doctor Seuss)
-
+    <div id = "form">
+    <form>
+    <textarea id="textBox" rows="60" cols="60">
         I AM SAM. I AM SAM. SAM I AM.
 
         THAT SAM-I-AM! THAT SAM-I-AM! I DO NOT LIKE THAT SAM-I-AM!
@@ -85,7 +83,7 @@
         I WILL NOT EAT THEM IN A HOUSE.
         I WILL NOT EAT THEM HERE OR THERE.
         I WILL NOT EAT THEM ANYWHERE.
-        I DO NOT EAT GREEM EGGS AND HAM.
+        I DO NOT EAT GREEN EGGS AND HAM.
         I DO NOT LIKE THEM, SAM-I-AM.
 
         SAY! IN THE DARK? HERE IN THE DARK!
@@ -132,10 +130,8 @@
         TRY THEM! TRY THEM! AND YOU MAY.
         TRY THEM AND YOU MAY, I SAY.
 
-        sAM! IF YOU LET ME BE,
+        SAM! IF YOU LET ME BE,
         I WILL TRY THEM. YOU WILL SEE.
-
-        (... and he tries them ...)
 
         SAY! I LIKE GREEN EGGS AND HAM!
         I DO! I LIKE THEM, SAM-I-AM!
@@ -155,11 +151,9 @@
         THANK YOU! THANK YOU, SAM I AM.
       </textarea>
 </form>
-
-<button id="button1" type="button" onclick="input()">Click Me!</button>
-
-<div id="div1" class="right">
-<p id="p1"></p>
+<button id="submit" type="button">Analyze</button>
+</div>
+<div id="results">
 </div>
 
 </body>
