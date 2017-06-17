@@ -3,12 +3,7 @@
 form {
   float: left;
 }
-/*.right {
-  z-index: 10;
-  position: absolute;
-  right: 0;
-  top: 0;
-}*/
+
 textarea{
   outline: none;
   resize: none;
@@ -16,7 +11,6 @@ textarea{
 body {
   padding: 20px;
   background-color: linen;
-  word-break:break-all
 }
 
 h1 {

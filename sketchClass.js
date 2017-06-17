@@ -45,15 +45,14 @@ function anaylze(){
   var textInput = input();
   var words = wordArray(textInput);
   var posGroups = groupPos(words);
-  while (form.hasChildNodes()) {
-  form.removeChild(form.lastChild);
-  }
   drawBody(posGroups);
 }
 
 function input(){
   var textInput = document.getElementById("textBox").value;
-  document.getElementById("textBox").value = '';
+  while (form.hasChildNodes()) {
+  form.removeChild(form.lastChild);
+  }
   return textInput;
 }
 
